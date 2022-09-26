@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Potrero</title>
+
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 
-<body style="background-color:rgba(173, 216, 230, 0.493);">
+<body>
 
-    <u><h1 style="text-align:center;">Receta Exclusiva</h1></u>
+    <h1>Receta Exclusiva</h1>
     
-    <h4 style="text-align:center ;">Hoy vamos con una receta que se lleva muy bien con el fin de semana… un delicioso Dulce de Mamón!!</h4>
+    <h4>Hoy vamos con una receta que se lleva muy bien con el fin de semana… un delicioso Dulce de Mamón!!</h4>
     
     <!--Audio insertado-->
-    <h5 style="color: red;">Un poco de buena música mientras preparamos esta sabrosa receta.</h5>
+    <h5>Un poco de buena música mientras preparamos esta sabrosa receta.</h5>
     <audio src="./audio/los_caballeros_de_la_quema_avanti_morocha.mp3" controls></audio>
     
 
@@ -24,18 +26,18 @@
     <p>El dulce de mamón o mamón en almíbar es uno de los postres clásicos de la gastronomía misionera. 
         Como bien lo dice su nombre, se trata de una preparación dulce hecha a base de mamón, también conocido en otros países como papaya, lechosa o melón de árbol.</p>
     <br>
-    <p><h2>¿Qué es el dulce de mamón?</h2>
-        El dulce de mamón o dulce de papaya no es más que un postre que se elabora con lonjas de mamón que se conservan en un líquido elaborado con azúcar y que al final de la cocción toma una coloración y consistencia acaramelada. Se caracteriza por ser un postre con alto valor calórico, pero es sumamente irresistible para los grandes y chicos.
+    <h2>¿Qué es el dulce de mamón?</h2>
+    <p>El dulce de mamón o dulce de papaya no es más que un postre que se elabora con lonjas de mamón que se conservan en un líquido elaborado con azúcar y que al final de la cocción toma una coloración y consistencia acaramelada. Se caracteriza por ser un postre con alto valor calórico, pero es sumamente irresistible para los grandes y chicos.
         
         A pesar de ser preparado y consumido con asiduidad en Misiones y Paraguay, este postre no es netamente típico de esta región, ya que la mayoría de los países latinoamericanos lo tienen como el consentido de sus postres, sobretodo en fechas especiales.</p>
-    <img src="./img/DM1.jpg" alt="Dulce de Mamón" style="width: 200px; height: 200px;">
-    <p><h2>¿Cómo se prepara el dulce de mamón?</h2>
-        La preparación típica del dulce de mamón se lleva a cabo en dos etapas. La primera consiste en macerar las lonjas de mamón en azúcar durante toda la noche para que la propia fruta suelte todos sus jugos.
-        
+        <a href="./img/DM1.jpg" download="postre1.jpg"> <img class="imagen" src="./img/DM1.jpg" alt="Dulce de Mamón"> </a>
+    <h2>¿Cómo se prepara el dulce de mamón?</h2>
+    <p>La preparación típica del dulce de mamón se lleva a cabo en dos etapas. La primera consiste en macerar las lonjas de mamón en azúcar durante toda la noche para que la propia fruta suelte todos sus jugos.
         Luego, todo es llevado a fuego lento por varias horas hasta que la fruta esté tierna y el líquido de cocción se torne a un color ámbar y tenga una consistencia más densa.</p>
-    <img src="./img/DM3.png" alt="Dulce de Mamón" style="width: 200px; height: 200px;">
-    <p><h2>Receta dulce de mamón</h2>
-        Prepará este delicioso postre y endulzá la vida de tus familiares y amigos, de seguro quedarán fascinados. Y lo mejor es que, es una preparación que requiere de unos pocos ingredientes. Mirá el paso a paso.</p>
+        <a href="./img/DM3.jpg" download="postre3.jpg"> <img class="imagen" src="./img/DM3.png" alt="Dulce de Mamón"> </a>
+    <h2>Receta dulce de mamón</h2>
+    <p>Prepará este delicioso postre y endulzá la vida de tus familiares y amigos, de seguro quedarán fascinados. Y lo mejor es que, es una preparación que requiere de unos pocos ingredientes. Mirá el paso a paso.</p>
+    
     <ul>
         <li><b>Raciones:</b> 4 personas</li>
         <li><b>Calorías:</b> 260 kcal</li>
@@ -43,7 +45,18 @@
         <li><b>Cocción:</b> 25 min</li>
         <li><b>Total:</b> 45 min</li>
     </ul>
-    <img src="./img/DM2.jpg" alt="Dulce de Mamón" style="width: 500px; height: 300px;">
+    <a href="./img/DM2.jpg" download="postre2.jpg"> <img class="imagen" src="./img/DM2.jpg" alt="Dulce de Mamón"> </a>
+    
+    <!--ejemplo de enlaces para descargar una imagen ->
+    <br>
+    <br>
+    <br>
+    <h3>Enlaces de Descarga</h3>
+    <a href="./img/DM2.jpg" download="postre.jpg">Link para descargar</a>
+    <br>
+    <br>
+    Hacer click sobre la imagen <br> <a href="./img/DM2.jpg" download="postre.jpg"> <img id="img_descarga" src="./img/DM2.jpg" alt="Dulce de Mamón"> </a>
+    <!- termina el ejemplo-->
 
     <h2>Ingredientes</h2>
     <ul>
@@ -76,13 +89,17 @@
 
     <!--Video insertado-->
     <br>
-    <u><h3>Video Explicativo</h3></u>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDRkDAcSNGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h3>Video Explicativo</h3>
+    <iframe src="https://www.youtube.com/embed/ZDRkDAcSNGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <!--Mapa insertado-->
-    <br>
-    <u><h3>Donde Disfrutar este Plato</h3></u>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.7405438880814!2d-54.455262685484634!3d-25.67989414909763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70533b74677adaaf!2zMjXCsDQwJzQ3LjYiUyA1NMKwMjcnMTEuMSJX!5e0!3m2!1ses-419!2sar!4v1663277984761!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h3>Donde Disfrutar este Plato</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.7405438880814!2d-54.455262685484634!3d-25.67989414909763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70533b74677adaaf!2zMjXCsDQwJzQ3LjYiUyA1NMKwMjcnMTEuMSJX!5e0!3m2!1ses-419!2sar!4v1663277984761!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    
+    <!--ejemplo de hipervinculo-->
+    <br><br>
+    <a href="contacto.html"> <img id="img_contacto" src="./img/correo-electronico.png" alt="Contacto"> </a>
 
 </body>
 </html>
