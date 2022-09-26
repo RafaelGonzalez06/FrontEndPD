@@ -4,7 +4,7 @@
 body {
     /*background-color: rgba(254, 255, 185, 0.897);*/
 
-    background-image: url(../img/cataratas1.jpg);
+    background-image: url('../img/cataratas1.jpg');
     background-size:100% 100%;
     background-repeat: no-repeat;
     background-attachment:fixed;
