@@ -1,267 +1,329 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #000000;
+        /*height: 100%;
+        width: 100%;*/
+        /* background-image: url('../img/cataratas1.jpg');
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        backdrop-filter: grayscale(100%);*/
+    }
+    
+    /*comienzo del header*/
+    header {
+        background-color: lightblue;
+        height: 25%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
+    .logo {
+        /*background-color: blue;*/
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+    }
+    
+    #img1 {
+        height: 60%;
+        width: 60%;
+        border-radius: 20px;
+    }
+    
+    .titulo {
+        /*background-color: brown;*/
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        flex-wrap: wrap;
+    }
 
-body {
-    background-color: #000000;
-    /* background-image: url('../img/cataratas1.jpg');
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    backdrop-filter: grayscale(100%);*/
-}
+    #titulo,
+    #frase {
+        height: 80%;
+        width: 80%;
+    }
 
-#contenedor {
-    display: grid;
-    grid-template-columns: 5fr 3fr;
-    grid-template-rows: 0.1fr 0.1fr 3fr 0.1fr;
-    grid-auto-rows: minmax(auto auto);
-    /* position: relative;
-    min-height: 100%;
-    margin-bottom: -20px;
-    background-color: darkorange; */
+    .redes_sociales {
+        /*background-color: blueviolet;*/
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+    }
 
-    /*********Codigo para generar el fondo con gradient************/
-    background: rgba(241,231,103,1);
-    background: -moz-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(2,7,102,1)));
-    background: -webkit-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-    background: -o-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-    background: -ms-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-    background: linear-gradient(to bottom, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#020766', GradientType=0 );
+    #whatsapp_header,
+    #facebook_header,
+    #instagram_header {
+        height: 50%;
+        width: 50%;
+    }
+    
+    h1 {
+        font-size: 3vh;        /*---ver como modificar el tamaño de la letra----*/
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(34, 57, 66);
+    }
 
-}
+    h4 {
+        font-size: 1rem;        /*---ver como modificar el tamaño de la letra----*/
+        text-align: center;
+        color: rgb(255, 0, 0);
+        text-shadow: 2px 2px 1px white;
+    }
+    
+    /*fin del header y sus contenedores*/
 
-h1{
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
-    color: rgb(34, 57, 66);
-}
+    nav {
+        background-color: rgb(151, 196, 211);
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-h2, h3 {
-    text-decoration: underline;
-    color: rgb(30, 159, 210);
-    font-size: x-large;
-    text-shadow: 2px 2px 1px #ffffff;
-    padding: 10px;
-}
+    section {
+        /*background-color: lightcyan;*/*/
+        width: 60%;
+        height: 100%;
 
-h3{
-    text-align: center;
-}
-
-h4{
-    text-align: center;
-    font-size: large;
-    color: rgb(255, 0, 0);
-    text-shadow: 2px 2px 1px white;
-}
-
-h5{
-    color: blue;
-    text-shadow: 1px 1px 1px #ffffff;
-}
-
-h6 {
-    color: white;
-}
-
-p{
-    /* color: rgb(255, 251, 0); */
-    color: rgb(0, 0, 0);
-    /* text-shadow: 1px 2px 2px #000000; */
-    text-shadow: 1px 1px 1px #ffffff;   /* desplazamiento horizontal - vertical - consistencia - color */
-    font-size: 20px;
-    text-align: justify;
-    padding: 10px;
-}
-
-ul, ol{
-    /* color: rgb(255, 251, 0);
-    text-shadow: 1px 1px 1px #000000; */
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 1px #000000;
-    font-size: 18px;
-}
-
-/* 
-   padding separacion entre el elemento y su caja
-   margin separacion entre los elementos/cajas
-*/
-/* presionando ctrl + } agrega el comentario en forma automatica */
-
-
-header{
-    /* background-color: lightblue; */
-    /* top: 0;
-    width: 100%; */
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-header audio, h6 {
-    float: right ;
-    width: 250px;
-}
-
-/* Inicia barra menu */
-nav{
-    /* background-color: lightcoral; */
-    /* text-align: center;
-    text-decoration: underline;
-    padding: 10px;
-    width: 100%; */
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-#menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-#menu li {
-    float: left;
-    padding: 10px;
-}
-/* termina barra menu */
-
-
-section{
-    /* background-color: lightcyan; */
-    /* float: left;
-    width: 60%; */
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3; 
-}
-
-
-/* Inicia barra lateral */
-aside{
-    background-color: rgba(241, 232, 103, 0.060);
-    /* float: right;
-    width: 40%; */
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    text-align: center;
-    align-self: auto;
-    border-radius: 20px;
-}
-
-.imagen{
-    width: 50%;
-    height: auto;
-    border-radius: 20px;
-    /* display:block;
-    margin-left: auto;
-    margin-right: auto; */
-    padding: 3px;
-}
-
-iframe{
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-}
-/* termine barra lateral */
-
-
-/* Inicia pie de pagina */
-footer{
-    /* background-color: rgb(255, 210, 9); */
-    /* position: static;
-    width: 100%;
-    height: 20px; */
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    text-align: center;
-    padding: 10px;
-}
-
-footer h5 {
-    text-align: center;
-}
-
-#img_contacto:hover, #whatsapp:hover, #facebook:hover, #instagram:hover{
-    opacity: 50%;
-    width: 60px;
-    height: 60px;
-
-}
-
-#whatsapp {
-    display:block;
-    width:70px; /*Tamaño del icono*/
-    height:70px;
-    color#fff;
-    position: fixed;
-    right:20px; /*Cambia right por left para que se vea la izquierda en vez de a la derecha*/
-    bottom:20px;
-    border-radius:50%;
-    line-height:80px;
-    text-align:center;
-    z-index:999;
-}
-/* termina pie de pagina */
-
-
-
-
-/*-------Estilo CONTACTO--------*/
-.principal {
-     /*********Codigo para generar el fondo con gradient************/
-     background: rgba(241,231,103,1);
-     background: -moz-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(2,7,102,1)));
-     background: -webkit-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-     background: -o-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-     background: -ms-linear-gradient(top, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-     background: linear-gradient(to bottom, rgba(241,231,103,1) 0%, rgba(2,7,102,1) 100%);
-     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#020766', GradientType=0 );
+    }
  
-}
+    aside {
+        background-color: rgba(241, 232, 103, 0.060);
+        width: 40%;
+        height: 100%;
+        text-align: center;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
 
-.principal h2 {
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
-    color: rgb(34, 57, 66);
-}
+    }
 
-label{
-    color: white;
-}
+    #contenedor {
+        display: flex;
+        justify-content:center;
+        /*flex-wrap: wrap;*/
+        width: 100%;
+        height: 100%;
+        
+        /*********Codigo para generar el fondo con gradient************/
+        background: rgba(241, 231, 103, 1);
+        background: -moz-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241, 231, 103, 1)), color-stop(100%, rgba(2, 7, 102, 1)));
+        background: -webkit-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: -o-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: linear-gradient(to bottom, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#020766', GradientType=0);
+    }
+    
+    .descarga,
+    .video,
+    .mapa {
+        width: 100%;
+        height: 100%;
+    }
 
-#titulo_contacto {
-    text-align: center;
-    font-size: 40px;
-}
+    .imagen {
+        width: 50%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    
+    iframe {
+        width: 80%;
+        height: 60%;
+        border-radius: 15px;
+    }
+    /* termine barra lateral */
+    
+    h2,
+    h3 {
+        text-decoration: underline;
+        color: rgb(30, 159, 210);
+        font-size: 3.5vh;
+        text-shadow: 2px 2px 1px #ffffff;
+        padding: 5px;
+    }
+    
+    .h3_aside {
+        text-decoration: underline;
+        color: rgb(30, 159, 210);
+        font-size: 2vh;
+        text-shadow: 2px 2px 1px #ffffff;
+        padding: 5px;
+        text-align: center;
+    }
+       
+    h5 {
+        color: blue;
+        text-shadow: 1px 1px 1px #ffffff;
+    }
+    
+    h6 {
+        color: white;
+        font-size: 2vh;
+        padding: 2px;
+    }
+    
+    p {
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px 1px #ffffff;    /* desplazamiento horizontal - vertical - consistencia - color */
+        font-size: 2.5vh; /*20px; */
+        text-align: justify;
+        padding: 10px;
+    }
+    
+    ul,
+    ol {
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 1px #000000;
+        font-size: 2.5vh; /*18px;*/
+    }
 
-#enviar {
-    margin-left: 100px;
-    border-radius:15px;
-    font-size: 20px;
-}
+    
+    /* 
+        padding separacion entre el elemento y su caja
+        margin separacion entre los elementos/cajas
+    */
+    /* presionando ctrl + } agrega el comentario en forma automatica */
+
+
+    /* Inicia pie de pagina */
+    
+    footer {
+        background-color: lightblue;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .contacto {
+        /*background-color: rgb(34, 171, 91);*/
+        height: 100%;
+        width: 25%;
+        align-self: center;
+        text-align: center;
+    }
+    
+    .redes_sociales_footer {
+        /*background-color: rgb(38, 15, 144);*/
+        height: 100%;
+        width: 25%;
+        align-self: center;
+        text-align: center;
+    }
+
+    .derechos {
+        /*background-color: brown;*/
+        height: 100%;
+        width: 50%;
+        align-self: center;
+    }
+
+    #img_contacto,
+    #facebook_footer,
+    #instagram_footer,
+    #whatsapp_footer {
+        width: 20%;
+        height: 20%;
+    }
+
+    footer h5 {
+        text-align: center;
+    }
+    /* termina pie de pagina */
+
+    .derechos {
+        /* width: 150vh; */
+        text-align: center;
+        font-size: 2vh;
+    }
+
+    /*Genero el efecto al pasar el mouse sobre el icono*/
+    /*#img_contacto:hover,
+    #whatsapp_header:hover,
+    #facebook_header:hover,
+    #instagram_header:hover,
+    #facebook_footer:hover,
+    #instagram_footer:hover,
+    #whatsapp_footer:hover {
+        opacity: 50%;
+        width: 5%;
+        height: 5%;
+    }*/
+    
+    /*Hago que el boton de whatsapp sea flotante*/
+    #whatsapp_footer {
+        display: block;
+        width: 70px;
+               /*Tamaño del icono*/
+        height: 70px;
+        color: #fff;
+        position: fixed;
+        right: 20px;       /*Cambia right por left para que se vea la izquierda en vez de a la derecha*/
+        bottom: 20px;
+        border-radius: 50%;
+        line-height: 80px;
+        text-align: center;
+        z-index: 999;
+    }
+    
+
+
+
+
+
+
+
+
+    /*-------Estilo pagina CONTACTO--------*/
+    
+    .principal {
+        /*********Codigo para generar el fondo con gradient************/
+        background: rgba(241, 231, 103, 1);
+        background: -moz-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241, 231, 103, 1)), color-stop(100%, rgba(2, 7, 102, 1)));
+        background: -webkit-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: -o-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        background: linear-gradient(to bottom, rgba(241, 231, 103, 1) 0%, rgba(2, 7, 102, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#020766', GradientType=0);
+    }
+    
+    .principal h2 {
+        font-size: 40px;
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(34, 57, 66);
+    }
+    
+    label {
+        color: white;
+    }
+    
+    #titulo_contacto {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    #enviar {
+        margin-left: 100px;
+        border-radius: 15px;
+        font-size: 20px;
+    }
