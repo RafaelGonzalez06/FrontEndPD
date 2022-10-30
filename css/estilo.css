@@ -3,11 +3,20 @@
         margin: 0;
         padding: 0;
     }
+
+    /*para utilizar una fuente instalada en nuestro proyecto*/
+    @font-face {
+        font-family: 'coco' ;
+        src: url(../fonts/Coco-Bold.otf);
+        format('truetype');
+    }
     
+    /*para importar una fuente libre y poder utilizarla en nuestro proyecto*/
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
     body {
         background-color: #000000;
-        /*height: 100%;
-        width: 100%;*/
+
         /* background-image: url('../img/cataratas1.jpg');
         background-size:100% 100%;
         background-repeat: no-repeat;
@@ -15,78 +24,108 @@
         backdrop-filter: grayscale(100%);*/
     }
     
-    /*comienzo del header*/
-    header {
+   
+    /*comienzo del header, footer y sus contenedores*/
+    header,
+    footer {
         background-color: lightblue;
-        height: 25%;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
+    }
+
+    header {
+        height: 25vh;
+    }
+
+    footer {
+        height: 10vh;
     }
 
     .logo {
         /*background-color: blue;*/
-        height: 100%;
-        width: 25%;
-        display: flex;
-        justify-content: space-around;
-        align-self: center;
+        height: 20vh;
+        width: 20vw;
     }
     
     #img1 {
-        height: 60%;
-        width: 60%;
+        height: 100%;
+        width: 100%;
         border-radius: 20px;
     }
     
     .titulo {
-        /*background-color: brown;*/
-        height: 100%;
-        width: 50%;
+        /* background-color: brown; */
+        height: 25vh;
+        width: 50vw;
         display: flex;
         justify-content: space-around;
         align-self: center;
         flex-wrap: wrap;
+        box-sizing: border-box;
     }
 
-    #titulo,
-    #frase {
-        height: 80%;
-        width: 80%;
-    }
+    #titulo {
+        font-family: 'coco';    /*utilizo la fuente declarada en @font-face*/
+        font-size: 2.5rem;
 
-    .redes_sociales {
-        /*background-color: blueviolet;*/
-        height: 100%;
-        width: 25%;
-        display: flex;
-        justify-content: space-around;
-        align-self: center;
-    }
-
-    #whatsapp_header,
-    #facebook_header,
-    #instagram_header {
-        height: 50%;
-        width: 50%;
-    }
-    
-    h1 {
-        font-size: 3vh;        /*---ver como modificar el tamaño de la letra----*/
         text-align: center;
         text-decoration: underline;
         color: rgb(34, 57, 66);
     }
+    
+    #frase {
+        font-family: 'Lobster';   /*utilizo la fuente importada*/
+        font-size: 1.5rem;
 
-    h4 {
-        font-size: 1rem;        /*---ver como modificar el tamaño de la letra----*/
         text-align: center;
         color: rgb(255, 0, 0);
         text-shadow: 2px 2px 1px white;
     }
-    
-    /*fin del header y sus contenedores*/
 
+    .redes_sociales {
+        /* background-color: rgb(38, 15, 144); */
+        height: 10vh;
+        width: 20vw;
+        text-align: center;
+        align-items: center;
+    }
+
+    #facebook,
+    #instagram {
+        height: 6vh;
+        width: 6vw;
+    }
+    
+    /* footer */
+     .contacto {
+        /*background-color: rgb(34, 171, 91);*/
+        height: 10vh;
+        width: 20vw;
+        align-items: center;
+    }
+    
+    .derechos {
+        /*background-color: brown;*/
+        height: 10vh;
+        width: 50vw;
+
+        font-family: 'Permanent';  /*uso la fuente declarada en el html*/
+        font-size: 1rem;
+
+        text-align: center;
+        align-items: center;
+    }
+
+    #img_contacto,
+    #whatsapp_footer {
+        width: 6vw;
+        height: 6vh;
+    }
+    /*fin del header, footer y sus contenedores*/
+
+    
     nav {
         background-color: rgb(151, 196, 211);
         list-style: none;
@@ -95,28 +134,31 @@
         flex-wrap: wrap;
     }
 
+    .audio{
+        width: 50vw;
+    }
+
     section {
-        /*background-color: lightcyan;*/*/
-        width: 60%;
+        /*background-color: lightcyan;*/
+        width: 65%;
         height: 100%;
 
     }
  
     aside {
         background-color: rgba(241, 232, 103, 0.060);
-        width: 40%;
-        height: 100%;
-        text-align: center;
+        width: 35%;
+        /* height: 100%; */
         border-radius: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
-
+        text-align: center;
     }
 
     #contenedor {
         display: flex;
-        justify-content:center;
+        justify-content:space-around;
         /*flex-wrap: wrap;*/
         width: 100%;
         height: 100%;
@@ -135,19 +177,23 @@
     .descarga,
     .video,
     .mapa {
-        width: 100%;
-        height: 100%;
+        width: 30vw;
+        /* height: 30vh; */
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .imagen {
-        width: 50%;
-        height: 50%;
+        width: 100%;
+        /* height: 50%; */
         border-radius: 20px;
     }
     
     iframe {
-        width: 80%;
-        height: 60%;
+        width: 100%;
+        /* height: 70%; */
         border-radius: 15px;
     }
     /* termine barra lateral */
@@ -156,7 +202,7 @@
     h3 {
         text-decoration: underline;
         color: rgb(30, 159, 210);
-        font-size: 3.5vh;
+        font-size: 1.5rem;
         text-shadow: 2px 2px 1px #ffffff;
         padding: 5px;
     }
@@ -164,9 +210,9 @@
     .h3_aside {
         text-decoration: underline;
         color: rgb(30, 159, 210);
-        font-size: 2vh;
+        font-size: 1.5rem;
         text-shadow: 2px 2px 1px #ffffff;
-        padding: 5px;
+        /* padding: 5px; */
         text-align: center;
     }
        
@@ -177,14 +223,14 @@
     
     h6 {
         color: white;
-        font-size: 2vh;
+        font-size: 2vw;
         padding: 2px;
     }
     
     p {
         color: rgb(0, 0, 0);
         text-shadow: 1px 1px 1px #ffffff;    /* desplazamiento horizontal - vertical - consistencia - color */
-        font-size: 2.5vh; /*20px; */
+        font-size: 1.5rem; /*2.5vh; */
         text-align: justify;
         padding: 10px;
     }
@@ -193,7 +239,7 @@
     ol {
         color: rgb(255, 255, 255);
         text-shadow: 1px 1px 1px #000000;
-        font-size: 2.5vh; /*18px;*/
+        font-size: 1.5rem; /*2.5vh;*/
     }
 
     
@@ -204,56 +250,6 @@
     /* presionando ctrl + } agrega el comentario en forma automatica */
 
 
-    /* Inicia pie de pagina */
-    
-    footer {
-        background-color: lightblue;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    
-    .contacto {
-        /*background-color: rgb(34, 171, 91);*/
-        height: 100%;
-        width: 25%;
-        align-self: center;
-        text-align: center;
-    }
-    
-    .redes_sociales_footer {
-        /*background-color: rgb(38, 15, 144);*/
-        height: 100%;
-        width: 25%;
-        align-self: center;
-        text-align: center;
-    }
-
-    .derechos {
-        /*background-color: brown;*/
-        height: 100%;
-        width: 50%;
-        align-self: center;
-    }
-
-    #img_contacto,
-    #facebook_footer,
-    #instagram_footer,
-    #whatsapp_footer {
-        width: 20%;
-        height: 20%;
-    }
-
-    footer h5 {
-        text-align: center;
-    }
-    /* termina pie de pagina */
-
-    .derechos {
-        /* width: 150vh; */
-        text-align: center;
-        font-size: 2vh;
-    }
 
     /*Genero el efecto al pasar el mouse sobre el icono*/
     /*#img_contacto:hover,
