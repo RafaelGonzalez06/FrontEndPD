@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="description" content="Recetas Deliciosas">
     <meta name="keywords" content="recetas, comidas, deliciosas, ricas">
     <meta name="author" content="Rafael González">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Página de Potrero</title>
+
+    <title>Recetas Misioneras</title>
 
     <!-- link para utilizar fuentes de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,156 +20,258 @@
 
     <link rel="shortcut icon" href="./img/misiones.jpeg" type="image/x-icon">
 
-    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    <!-- CSS Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- CSS Personal -->
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 
 <body>
-    <nav id="menu">
-        <h3><b>Mas Recetas</b></h3>
-        <a href="https://elrecopiladordesabores.blogspot.com/2018/03/vori-vori.html" target="_blank" title="Muy Rico">Vori Vori</a>
-        <a href="https://www.yerbamateromance.com.ar/blog/como-hacer-reviro-misionero/" target="_blank" title="Exquisito">Reviro Misionero</a>
-        <a href="https://caserissimo.com/2019/02/marineras-o-escalopes-de-carne/" target="_blank" title="Un Manjar">Marinera</a>
-        <a href="https://xn--oquis-nta.net/mandioca/" target="_blank" title="Imperdible">Ñoquis de Mandioca</a>
-    </nav>
-    <br>
-    <header>
-        <img src="./img/Logo.png" alt="logo" id="logo">  
-        <img src="./img/LogoByN.jpg" alt="logo" id="logo1">   <!-- esta imagen aparece cuando se ve en tamaño de celular -->
-     
-        <div class="titulo">
-            <img id="bandera" src="./img/misiones.png" alt="bandera">
-            <h1 id="titulo">Recetas Misioneras</h1>
-            <h4 id="frase">Hoy vamos con una receta que se lleva muy bien con el fin de semana… un delicioso Dulce de Mamón!!</h4>
-        </div>
-     
-        <div class="redes_sociales">
-            <a href="https://es-la.facebook.com/" target="_blank" title="Siguenos en Facebook"><img id="facebook" src="./img/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/" target="_blank" title="Siguenos en Instagram"><img id="instagram" src="./img/instagram.png" alt="Instagram"></a>
-        </div>
+
+    <header class="m-4 px-3 text-bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid nav-justified">
+                <a href="#" class="navbar-brand">
+                    <img src="./img/Logo.png" alt="logo" class="img-fluid img-thumbnail" id="logo">
+                    <img src="./img/LogoByN.jpg" alt="logo" id="logo1">
+                    <!--esta imagen aparece cuando se ve en tamaño de celular-->
+                </a>
+                
+                <h2 class="logo">Recetas Misioneras</h2>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <a href="#" class="nav-link nav-item menu-color">Inicio</a>
+                    <a href="#" class="nav-link nav-item menu-color">Blog</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link nav-item dropdown-toggle menu-color" data-bs-toggle="dropdown">Redes Sociales</a>
+                        <div class="dropdown-menu">
+                            <a href="https://es-la.facebook.com/" target="_blank" title="Siguenos en Facebook"
+                                class="dropdown-item"><img id="facebook" src="./img/facebook.png" alt="Facebook">
+                                Facebook</a>
+                            <a href="https://www.instagram.com/" target="_blank" title="Siguenos en Instagram"
+                                class="dropdown-item"><img id="instagram" src="./img/instagram.png" alt="Instagram">
+                                Instagram</a>
+                            <a href="https://wa.me/5493757677810/?text=Hola,%20me%20podría%20brindar%20mayor%20información?%20Gracias"
+                                class="dropdown-item"><img id="whatsapp" src="./img/whatsapp.png" alt="Instagram">
+                                Whatsapp</a>
+                            <a href="contacto.html" class="dropdown-item"><img id="contacto" src="./img/correo-electronico.png"
+                                    alt="Instagram"> Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
-<!-- aca va el nav -->
+    <section id="banner">
+        <div class="contenido_banner">
+            <h3><span>MISIONES: </span>UNA PROVINCIA DE ENCANTOS TURISTICOS <br> Y GASTRONOMICOS </BR></h3>
+            <!-- <a href="#" class="boton_empezar">EMPEZAR</a> -->
+        </div>
+    </section>
 
-    <div id="contenedor">
-        <section class="receta">
-            <!--Audio insertado-->
-            <audio class="audio" src="./audio/los_caballeros_de_la_quema_avanti_morocha.mp3" controls></audio>
-            <h6>Un poco de buena música mientras preparamos esta sabrosa receta.</h6>
+    <div class="container-fluid">
+        <aside class="color-fondo rounded-4">
+            <h1>UN POCO DE HISTORIA</h1>
+            <p class="lead"> La provincia de Misiones lleva un nombre que recuerda a los pueblos jesuíticos, pero su
+                historia se funda en las raíces de la América indígena.
 
-            <!--Descripción de la receta-->
-            <br>
-            <h2>Dulce de Mamón</h2>
-            <p>El dulce de mamón o mamón en almíbar es uno de los postres clásicos de la gastronomía misionera. Como bien lo dice su nombre, se trata de una preparación dulce hecha a base de mamón, también conocido en otros países como papaya, lechosa o
-                melón de árbol.</p>
-            <br>
-            <h2>¿Qué es el dulce de mamón?</h2>
-            <p>El dulce de mamón o dulce de papaya no es más que un postre que se elabora con lonjas de mamón que se conservan en un líquido elaborado con azúcar y que al final de la cocción toma una coloración y consistencia acaramelada. Se caracteriza
-                por ser un postre con alto valor calórico, pero es sumamente irresistible para los grandes y chicos. A pesar de ser preparado y consumido con asiduidad en Misiones y Paraguay, este postre no es netamente típico de esta región, ya que la
-                mayoría de los países latinoamericanos lo tienen como el consentido de sus postres, sobretodo en fechas especiales.</p>
-            
-            <br>
-            
-            <h2>¿Cómo se prepara el dulce de mamón?</h2>
-            <p>La preparación típica del dulce de mamón se lleva a cabo en dos etapas. La primera consiste en macerar las lonjas de mamón en azúcar durante toda la noche para que la propia fruta suelte todos sus jugos. Luego, todo es llevado a fuego lento
-                por varias horas hasta que la fruta esté tierna y el líquido de cocción se torne a un color ámbar y tenga una consistencia más densa.</p>
-            
-            <br>
+                Los indios guaraníes, de la familia Tupí-Guaraní, provenientes del Amazonas, llegaron a lo que es hoy
+                territorio misionero hacia el año 1000. En su mítica búsqueda de la “tierra sin mal” fueron asentándose
+                a la vera de ríos y arroyos.
 
-            <h2>Receta dulce de mamón</h2>
-            <p>Prepará este delicioso postre y endulzá la vida de tus familiares y amigos, de seguro quedarán fascinados. Y lo mejor es que, es una preparación que requiere de unos pocos ingredientes. Mirá el paso a paso.</p>
+                Desplazaron a pequeños grupos aislados que poblaban este territorio prácticamente inhabitado e hicieron
+                lo mismo con grupos más importantes, como los guayaquíes y kaingang....</p>
+            <p><a href="https://misiones.tur.ar/historia/" target="_blank" class="btn btn-success btn-lg">SEGUIR
+                    LEYENDO...</a></p>
+        </aside>
 
-            <ul>
-                <li><b>Raciones:</b> 4 personas</li>
-                <li><b>Calorías:</b> 260 kcal</li>
-                <li><b>Preparación:</b> 20 min</li>
-                <li><b>Cocción:</b> 25 min</li>
-                <li><b>Total:</b> 45 min</li>
-            </ul>
+        <section class="espacio"></section>
 
-            <br>
+        <section class="color-fondo row g-3 text-white rounded-4">
+            <h1>GASTRONOMIA</h1>
+            <p class="lead"> Como consecuencia de las múltiples influencias culturales que conforman su identidad, la
+                gastronomía misionera es muy variada. La cocina guaraní, la española, la brasilera y las recetas traídas
+                por las distintas comunidades de inmigrantes europeos y asiáticos conforman una oferta gastronómica rica
+                en sabores y procedencias.
 
-            <h2>Ingredientes</h2>
-            <ul>
-                <li>1 kilo de mamón verde</li>
-                <li>1 kilo de azúcar</li>
-                <li>Agua c/n</li>
-                <li>Clavo de olor</li>
-                <li>¼ cucharadita de bicarbonato</li>
-                <li>Cáscara de limón</li>
-            </ul>
-            
-            <br>
-
-            <h2>Preparacion</h2>
-            <ol>
-                <li>Lo primero que se debe hacer es pelar el mamón y cortarlo por la mitad. Después se debe picar en gajos.</li>
-                <li>Se debe colocar la fruta en un recipiente con agua y se debe dejar reposar por algunas horas. En este periodo de tiempo, los gajos de mamón liberan sus propios jugos.</li>
-                <li>Después de haber dejado remojar el mamón, se debe colocar en una olla y llevar a fuego lento con el azúcar y el clavo de olor. Es sumamente importante no revolver mucho la preparación para que los gajos no se deshagan.</li>
-                <li>Para determinar cuando el dulce está listo se debe esperar hasta que la fruta tome un color ámbar un poco oscuro y el líquido se ponga espeso. En ese preciso momento agregar la cáscara de limón al gusto y el bicarbonato.</li>
-                <li>Por último, se debe retirar del fuego y dejar enfriar.</li>
-                <li>Servir en una copa para postres.</li>
-                <li>Listo!! Sólo queda disfrutarlo como corresponde!!</li>
-            </ol>
-            <!--Fin de la descripcion de la receta-->
-
-            <br>
-
-            <h3>Tips o secretos del dulce de mamón</h3>
-            <ul>
-                <li>El dulce de mamón tiende a ser un poco empalagoso, por esta razón se recomienda añadir unas gotas de limón o un chorrito de jugo de pomelo para balancear un poco los sabores. Esto se debe hacer justo al final.</li>
-                <li>Para realizar este postre podés utilizar la fruta verde o madura; sin embargo, lo idóneo es que estén semiverdes, es decir, ni muy verdes ni muy maduras. En caso de utilizar la fruta madura, se debe reducir la cantidad de azúcar a la mitad.</li>
-            </ul>
+                En las Cataratas del Iguazú se puede, en un mismo día, desayunar como en Brasil, almorzar como en
+                Paraguay y cenar como en la Argentina. La ciudad de Puerto Iguazú cuenta con una variada oferta de
+                restaurantes, donde se puede comer alguno de los más famosos platos elaborados a base de pescados de la
+                zona, como el dorado, el surubí, el pacú, el paty y el manguruyú. La forma más común de preparación de
+                los pescados es a la parrilla, al horno o en milanesa.....</p>
+            <p><a href="https://misiones.tur.ar/gastronomia/" target="_blank" class="btn btn-success btn-lg">SEGUIR
+                    LEYENDO...</a></p>
 
         </section>
 
-        <aside class="barra_lateral">
-            <div class="descarga">
-                <h3 class="h3_aside">Imagenes para Descargar</h3>
-                <br>
-                <a href="./img/DM1.jpg" download="postre1.jpg"> <img class="imagen" src="./img/DM2.jpg" alt="Dulce de Mamón"> </a>
-                <a href="./img/DM3.jpg" download="postre3.jpg"> <img class="imagen1" src="./img/DM3.png" alt="Dulce de Mamón"> </a>
-                <a href="./img/DM2.jpg" download="postre2.jpg"> <img class="imagen2" src="./img/DM1.jpg" alt="Dulce de Mamón"> </a>
+        <section class="espacio"></section>
+
+        <section class="color-fondo row g-3 text-white rounded-4">
+            <h1 id="titulo">RECETAS</h1>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card card-body">
+                    <h2 class="card-title">DULCE DE MAMON</h2>
+                    <img class="card-img-top img-thumbnail" src="./img/DM5.jpeg" alt="Dulce de Mamón">
+                    <p class="card-text">El dulce de mamón o mamón en almíbar es uno de los postres clásicos de la
+                        gastronomía misionera. Como bien lo dice su nombre, se trata de una preparación dulce hecha a
+                        base de mamón, también conocido en otros países como papaya, lechosa o
+                        melón de árbol.</p>
+                    <br>
+                    <h2 class="card-subtitle">¿Qué es el dulce de mamón?</h2>
+                    <p class="card-text">El dulce de mamón o dulce de papaya no es más que un postre que se elabora con
+                        lonjas de mamón
+                        que se conservan en un líquido elaborado con azúcar y que al final de la cocción toma una
+                        coloración y consistencia acaramelada. Se caracteriza
+                        por ser un postre con alto valor calórico, pero es sumamente irresistible para los grandes y
+                        chicos. A pesar de ser preparado y consumido con asiduidad en Misiones y Paraguay, este postre
+                        no es netamente típico de esta región, ya que la
+                        mayoría de los países latinoamericanos lo tienen como el consentido de sus postres, sobretodo en
+                        fechas especiales.</p>
+
+                    <p><a href="https://recetasargentinas.org/receta-dulce-de-mamon/" target="_blank"
+                            class="btn btn-success">Saber Mas &raquo;</a></p>
+                </div>
             </div>
 
-            <!--Video insertado-->
-            <div class="video">
-                <br>
-                <h3 class="h3_aside">Video Explicativo</h3>
-                <iframe src="https://www.youtube.com/embed/ZDRkDAcSNGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card card-body">
+                    <h2 class="card-title">CHIPA DE ALMIDON</h2>
+                    <img class="card-img-top img-thumbnail" src="./img/chipa_almidon.jpg" alt="Chipa de Almidon">
+                    <p class="card-text">En Paraguay y las provincias de Formosa y Misiones es conocida como «la chipa»
+                        que es la forma considerada como correcta porque cumple con el vocabulario del lugar de origen
+                        (Paraguay) (acentuado en la «i», sin tilde) o en diminutivo «chipita». En Corrientes, Entre
+                        Ríos, Chaco y otros lugares de Argentina, es llamado «el chipá» (en masculino y con acento en la
+                        «a») y su diminutivo «chipacito».
+
+                        En guaraní, la palabra carece de género gramatical, sin embargo la mayoría de las gramáticas
+                        aceptan el uso de artículos determinados provenientes del español (la y el).
+
+                        La «ch» se pronunciaría como la «sh» del inglés en el guaraní hablado en Paraguay, Formosa, una
+                        parte de Chaco y Misiones. Por su parte, la «ch» suena como la «ch» del castellano en el guaraní
+                        hablado en Corrientes, en ciertas zonas del Chaco, Misiones y Entre Ríos y por toda la comunidad
+                        mbyá guaraní.</p>
+                    <br>
+                    <h2 class="card-subtitle">¿Qué es la Chipa de Almidon?</h2>
+                    <p class="card-text">Chipa es un vocablo que proviene del guaraní. Según la grafía actual, en
+                        guaraní está palabra se escribe «chipa» y se pronuncia parecido a [shipá] (o [ʃi'pa], según
+                        el AFI). Este es un alimento cuya preparación más tradicional es a base de almidón/fécula
+                        de mandioca y queso semiduro. Es herencia de la cocina mestiza cario guaraní-española, y
+                        es tradicional de la gastronomía de Paraguay; se comparte con el nordeste argentino
+                        y las zonas fronterizas del suroeste de Brasil. El término «chipa» es la forma corta de
+                        «chipa almidón», que es la variedad más conocida. Sin embargo, la palabra también se refiere
+                        a todas las comidas con consistencia de masa hechas a base de maíz y almidón de mandioca que
+                        con el paso de los siglos tomaron diferentes formas; desde su versión primitiva (el mbuyapé)
+                        hasta las variedades actualmente registradas, fruto de la transculturación guaraní-española,
+                        sumado a la cocina moderna. Por ello, existen alrededor de 70 variedades identificadas de
+                        las que bien puede llamarse «familia de las chipas» en la gastronomía popular paraguaya.</p>
+
+                    <p><a href="https://cocinerosargentinos.com/economicas/chipa-paso-a-paso" target="_blank"
+                            class="btn btn-success">Saber Mas &raquo;</a></p>
+                </div>
             </div>
 
-            <!--Mapa insertado-->
-            <div class="mapa">
-                <h3 class="h3_aside">Donde Disfrutar este Plato</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.7405438880814!2d-54.455262685484634!3d-25.67989414909763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70533b74677adaaf!2zMjXCsDQwJzQ3LjYiUyA1NMKwMjcnMTEuMSJX!5e0!3m2!1ses-419!2sar!4v1663277984761!5m2!1ses-419!2sar"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card card-body">
+                    <h2 class="card-title">REVIRO</h2>
+                    <img class="card-img-top img-thumbnail" src="./img/reviro.png" alt="Reviro">
+                    <p class="card-text">Es un plato típico de la región de Misiones, Paraguay y Brasil. Se elabora a
+                        partir de harina, agua y sal, tiene un sabor similar al de las tortitas fritas y una
+                        consistencia granulada y desmenuzada.
+                        Con frecuencia, este alimento reemplaza al pan en muchas
+                        comidas o también puede disfrutarse dulce durante el desayuno o a la hora de la merienda,
+                        acompañado del tradicional cocido quemado.
+                    </p>
+                    <br>
+                    <h2 class="card-subtitle">¿Qué es EL Reviro?</h2>
+                    <p class="card-text">Sin lugar a duda la receta de reviro es un platillo muy tradicional,
+                        existen muchas versiones como todos los platillos hay salados y
+                        dulces sin embargo el que mas se consume es la versión salada y es la mas popular.
+                        Hay convinaciones con huevo frito (foto), con carne picada (tikue`i), con azucar, etc.
+                        Quien no ha saboreado en un desayuno esta fantástica comida preparada por la abuela. Es un
+                        comenzar del día perfecto por su alto contenido de energía, es el perfecto desayuno que no puede
+                        faltar en nuestras recetas y es por ello que te debes conocer toda la historia de esta comida
+                        guaraní milenaria.
+
+                        Pero antes te vamos enseñar paso a paso como se elabora esta comida típica de Misiones para que
+                        nunca falte en tu mesa y sorprendas a todo aquel que no pueda o no lo haya saboreado.. MANOS A
+                        LA
+                        OBRA!! con el reviro receta original.
+                    </p>
+
+                    <p><a href="https://www.regionlitoral.net/2019/02/la-historia-del-reviro.html" target="_blank"
+                            class="btn btn-success">Saber Mas &raquo;</a></p>
+                </div>
             </div>
-        </aside>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card card-body">
+                    <h2 class="card-title">SOPA PARAGUAYA</h2>
+                    <img class="card-img-top img-thumbnail" src="./img/sopa_paraguaya.png" alt="Sopa Paraguaya">
+                    <p class="card-text">Herencia de la cocina desarrollada en las reducciones franciscanas y en las
+                        misiones jesuíticas guaraníes, se trata de un plato típico de la gastronomía paraguaya, del
+                        Nordeste argentino y de la zona brasileña cercana a zonas como la Región sur y el Mato Grosso
+                        del Sur.</p>
+                    <br>
+                    <h2 class="card-subtitle">¿Qué es La Sopa Paraguaya?</h2>
+                    <p class="card-text">Te dicen sopa y lo primero que imaginas es un alimento líquido lleno de
+                        verduras en un plato hondo, pero la sopa paraguaya, a pesar de su nombre, es un alimento sólido
+                        y consistente. Con un sabor delicioso, la sopa paraguaya es lo más parecido a un bizcochuelo
+                        esponjoso salado, de muy rico contenido calórico y proteico a base de maíz blanco, queso, huevos
+                        y especias. ¡Una verdadera delicia!</p>
+
+                    <p><a href="https://comidasparaguayas.com/receta-sopa-paraguaya/" target="_blank"
+                            class="btn btn-success">Saber Mas &raquo;</a></p>
+                </div>
+            </div>
+
+        </section>
     </div>
 
+    <hr><br>
+
     <footer>
-        <div class="contacto">
-            <!--ejemplo de hipervinculo-->
-            <a href="contacto.html" title="Envianos un email con tu consulta"> <img id="img_contacto" src="./img/correo-electronico.png" alt="Contacto"></a>
+        <!-- boton flotante -->
+        <a href="#" title="UP"><img id="flecha-arriba" src="./img/flecha-arriba.png" alt="UP"></a>
+
+        <div class="row">
+
+            <div class="col-md-4 text-md-center fondo-copy">
+                <p>Copyright © 2022 Rafael Gonzalez</p>
+                <a href="#" class="text-dark">Terms of Use</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="#" class="text-dark">Privacy Policy</a>
+            </div>
+
+            <div class="col-md-4 fondo-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57562.00870217229!2d-54.603281708293686!3d-25.61735636184574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6923af74e96dd%3A0xb4b8eeda942aae07!2sPuerto%20Iguaz%C3%BA%2C%20Misiones!5e0!3m2!1ses-419!2sar!4v1668971085376!5m2!1ses-419!2sar"
+                    width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="col-md-4 fondo-redes">
+                <a class="link-redes" href="https://es-la.facebook.com/" target="_blank"
+                    title="Siguenos en Facebook"><img id="facebook" src="./img/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank" title="Siguenos en Instagram"><img
+                        class="link-redes" id="instagram" src="./img/instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/5493757677810/?text=Hola,%20me%20podría%20brindar%20mayor%20información?%20Gracias"
+                    target="_blank" title="chatea con nosotros"><img id="whatsapp" src="./img/whatsapp.png"
+                        alt="Instagram"></a>
+                <a href="contacto.html" target="_blank" title="Escribenos un correo"><img id="contacto"
+                        src="./img/correo-electronico.png" alt="Instagram"></a>
+            </div>
         </div>
-
-        <a href="https://wa.me/5493757677810/?text=Hola,%20me%20podría%20brindar%20mayor%20información?%20Gracias" target="_blank" title="Contactanos por Whatsapp"><img id="whatsapp_footer" src="./img/whatsapp.png" alt="Whatsapp"></a>
-
-        <div class="redes_sociales">
-            <a href="https://es-la.facebook.com/" target="_blank" title="Siguenos en Facebook"><img id="facebook" src="./img/facebook.png" alt="Facebook"></a>
-
-            <a href="https://www.instagram.com/" target="_blank" title="Siguenos en Instagram"><img id="instagram" src="./img/instagram.png" alt="Instagram"></a>
-        </div>
-
-        <div class="derechos">
-            <h5>Copyright 2022 ©</h5>
-            <h5>Todos los derechos de Autor: Rafael González</h5>
-        </div>
-
     </footer>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
