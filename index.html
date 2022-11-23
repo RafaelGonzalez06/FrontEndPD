@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
     <!-- termina el link -->
 
+    <!-- cargo el icono de la barra de titulo de la pagina -->
     <link rel="shortcut icon" href="./img/misiones.jpeg" type="image/x-icon">
 
     <!-- CSS Boostrap -->
@@ -26,9 +27,29 @@
 
     <!-- CSS Personal -->
     <link rel="stylesheet" href="./css/estilo.css">
+
+    <!--link para utilizar los iconos de font-awesome-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <!-- llamo al script para que salude antes de ingresar a la pagina -->
+    <script>alert("Bienvenido a Mi Pagina. Mensaje ejecutado desde el head")</script>
+
 </head>
 
 <body>
+    <!-- barra de desplazamiento de la pagina -->
+    <div id="barra_progreso"></div>
+    
+
+    <!-- pagina de carga de la web -->
+    <div class="carga" style="display: none;"></div>
+     <!-- style="display: none;"></div> -->
+    
+
+     
+    <section class="espacio"></section>
 
     <header class="m-4 px-3 text-bg-dark">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -237,8 +258,15 @@
     <hr><br>
 
     <footer>
-        <!-- boton flotante -->
+        <!-- boton flotante Flecha Arriba -->
         <a href="#" title="UP"><img id="flecha-arriba" src="./img/flecha-arriba.png" alt="UP"></a>
+
+        <!-- boton de modo oscuro Flotante-->
+            <a href id="modo_oscuro" class="av-link scrollto" onclick="load()">
+                <i id="icono" class="fas fa-moon" style="font-size:18px;"></i>
+                <!-- <span id="texto">Oscuro</span> -->
+            </a>
+        <!-- fa-sun -->
 
         <div class="row">
 
@@ -247,6 +275,8 @@
                 <a href="#" class="text-dark">Terms of Use</a>
                 <span class="text-muted mx-2">|</span>
                 <a href="#" class="text-dark">Privacy Policy</a>
+                <span class="text-muted mx-2">|</span>
+                <button class="btn btn-info" onclick="cartel()">+Info...</button>
             </div>
 
             <div class="col-md-4 fondo-mapa">
@@ -271,7 +301,56 @@
         </div>
     </footer>
 
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+
+
+<!-- animacion de carga de pagina -->
+<!-- <script type="text/javascript">
+    $(window).load(function() {
+        $(".carga").fadeOut("slow");
+    });
+</script> -->
+<!-- termina animacion -->
+
+
+
+<!-- Script para modificar el modo oscuro y claro -->
+<script>
+    const modo_oscuro = document.querySelector('#modo_oscuro');
+    const html = document.querySelector('html');
+    
+    load();
+    
+    modo_oscuro.addEventListener('click', e => {
+        html.classList.toggle('darkmode');
+        store(html.classList.contains('darkmode'));
+    });
+    
+    function load() {
+        const darkmode = localStorage.getItem('darkmode');
+        var icon = document.getElementById('icono');
+        var texto = document.getElementById('texto');
+        
+        if (!darkmode) {
+            store('false');
+        } else if (darkmode == 'true') {
+            html.classList.add('darkmode');
+            //texto.innerText = 'Claro'; //cambia el texto de span
+            icon.classList.toggle('fa-sun'); //cambia el icono del enlance
+        }
+    }
+    
+    function store(value) {
+        localStorage.setItem('darkmode', value);
+    }   
+</script>
+
+
 </body>
 
 </html>

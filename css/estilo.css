@@ -226,6 +226,13 @@ footer a img {
     font-size: 1.2rem;
 }
 
+.btn-info {
+    background-color: rgba(112, 186, 247, 0.452);
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: bold;
+}
+
 .fondo-mapa {
     padding: 10px;
     background-color: rgba(128, 128, 128, 0.849);
@@ -269,6 +276,75 @@ footer a img {
     z-index: 999;
 }
 
+
+
+/* boton flotante modo oscuro */
+#modo_oscuro {
+    display: block;
+    width: 30px;
+           /* Tamaño del icono */
+    height: 30px;
+    color: rgb(231, 231, 231);
+    background-color: #4d4d5c6b;
+    position: fixed;
+    left: 10px;       /*Cambia right por left para que se vea la izquierda en vez de a la derecha*/
+    top: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    z-index: 999;
+}
+
+/*------ configuracion modo oscuro ----------*/
+html.darkmode {
+    filter: invert(100%);
+}
+
+html.darkmode #hero {
+    filter: invert(100%);
+}
+
+html.darkmode img {
+    filter: invert(100%);
+}
+/*------- fin modo oscuro -----------*/
+
+
+/*--------------------------------------------------------------
+/*Loading page pagina de presentacion*/
+.carga {
+    position: fixed;
+    z-index: 99999;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/pageLoader.gif) center no-repeat #fff;
+    transition: 1s all;
+    opacity: .8;
+}
+/*Loading page
+--------------------------------------------------------------*/
+
+
+/* barra de desplazamiento de la pagina */
+
+/* Progress bar */
+#barra_progreso {
+    --scrollAmount: 0%;
+    
+    background-image: linear-gradient(120deg, #ffffff 0%, #0400ff 100%);
+    width: var(--scrollAmount);
+  
+    /*  background: linear-gradient(to right, #F24E1E var(--scrollAmount), transparent 0);
+    width: 100%; */
+    
+    height: 20px;
+    position: fixed;
+    top: 0;
+
+    z-index: 999999;
+  }
 
 
 /* RESPONSIVE */
