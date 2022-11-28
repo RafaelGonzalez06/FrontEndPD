@@ -7,7 +7,8 @@
     <meta name="description" content="Recetas Deliciosas">
     <meta name="keywords" content="recetas, comidas, deliciosas, ricas">
     <meta name="author" content="Rafael González">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="google"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Recetas Misioneras</title>
@@ -34,7 +35,7 @@
 
 
     <!-- llamo al script para que salude antes de ingresar a la pagina -->
-    <script>alert("Bienvenido a Mi Pagina. Mensaje ejecutado desde el head")</script>
+    <script>alert("Bienvenido a Mi Pagina. \n\nMensaje ejecutado desde el head")</script>
 
 </head>
 
@@ -43,12 +44,6 @@
     <div id="barra_progreso"></div>
     
 
-    <!-- pagina de carga de la web -->
-    <div class="carga" style="display: none;"></div>
-     <!-- style="display: none;"></div> -->
-    
-
-     
     <section class="espacio"></section>
 
     <header class="m-4 px-3 text-bg-dark">
@@ -90,6 +85,7 @@
         </nav>
     </header>
 
+    <!-- hero -->
     <section id="banner">
         <div class="contenido_banner">
             <h3><span>MISIONES: </span>UNA PROVINCIA DE ENCANTOS TURISTICOS <br> Y GASTRONOMICOS </BR></h3>
@@ -134,10 +130,11 @@
 
         <section class="espacio"></section>
 
+        <!-- seccion de las card -->
         <section class="color-fondo row g-3 text-white rounded-4">
             <h1 id="titulo">RECETAS</h1>
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card card-body">
+                <div class="carta card card-body">
                     <h2 class="card-title">DULCE DE MAMON</h2>
                     <img class="card-img-top img-thumbnail" src="./img/DM5.jpeg" alt="Dulce de Mamón">
                     <p class="card-text">El dulce de mamón o mamón en almíbar es uno de los postres clásicos de la
@@ -147,8 +144,7 @@
                     <br>
                     <h2 class="card-subtitle">¿Qué es el dulce de mamón?</h2>
                     <p class="card-text">El dulce de mamón o dulce de papaya no es más que un postre que se elabora con
-                        lonjas de mamón
-                        que se conservan en un líquido elaborado con azúcar y que al final de la cocción toma una
+                        lonjas de mamón que se conservan en un líquido elaborado con azúcar y que al final de la cocción toma una
                         coloración y consistencia acaramelada. Se caracteriza
                         por ser un postre con alto valor calórico, pero es sumamente irresistible para los grandes y
                         chicos. A pesar de ser preparado y consumido con asiduidad en Misiones y Paraguay, este postre
@@ -162,7 +158,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card card-body">
+                <div class="carta card card-body">
                     <h2 class="card-title">CHIPA DE ALMIDON</h2>
                     <img class="card-img-top img-thumbnail" src="./img/chipa_almidon.jpg" alt="Chipa de Almidon">
                     <p class="card-text">En Paraguay y las provincias de Formosa y Misiones es conocida como «la chipa»
@@ -199,7 +195,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card card-body">
+                <div class="carta card card-body">
                     <h2 class="card-title">REVIRO</h2>
                     <img class="card-img-top img-thumbnail" src="./img/reviro.png" alt="Reviro">
                     <p class="card-text">Es un plato típico de la región de Misiones, Paraguay y Brasil. Se elabora a
@@ -232,7 +228,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card card-body">
+                <div class="carta card card-body">
                     <h2 class="card-title">SOPA PARAGUAYA</h2>
                     <img class="card-img-top img-thumbnail" src="./img/sopa_paraguaya.png" alt="Sopa Paraguaya">
                     <p class="card-text">Herencia de la cocina desarrollada en las reducciones franciscanas y en las
@@ -259,15 +255,19 @@
 
     <footer>
         <!-- boton flotante Flecha Arriba -->
-        <a href="#" title="UP"><img id="flecha-arriba" src="./img/flecha-arriba.png" alt="UP"></a>
+        <div class="go-top-container">
+            <div class="go-top-button" id="boton_up">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
 
         <!-- boton de modo oscuro Flotante-->
-            <a href id="modo_oscuro" class="av-link scrollto" onclick="load()">
-                <i id="icono" class="fas fa-moon" style="font-size:18px;"></i>
-                <!-- <span id="texto">Oscuro</span> -->
-            </a>
-        <!-- fa-sun -->
+        <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+        </button>
 
+        <!-- pie de pagina -->
         <div class="row">
 
             <div class="col-md-4 text-md-center fondo-copy">
@@ -306,50 +306,6 @@
     <script src="./js/main.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
-
-
-<!-- animacion de carga de pagina -->
-<!-- <script type="text/javascript">
-    $(window).load(function() {
-        $(".carga").fadeOut("slow");
-    });
-</script> -->
-<!-- termina animacion -->
-
-
-
-<!-- Script para modificar el modo oscuro y claro -->
-<script>
-    const modo_oscuro = document.querySelector('#modo_oscuro');
-    const html = document.querySelector('html');
-    
-    load();
-    
-    modo_oscuro.addEventListener('click', e => {
-        html.classList.toggle('darkmode');
-        store(html.classList.contains('darkmode'));
-    });
-    
-    function load() {
-        const darkmode = localStorage.getItem('darkmode');
-        var icon = document.getElementById('icono');
-        var texto = document.getElementById('texto');
-        
-        if (!darkmode) {
-            store('false');
-        } else if (darkmode == 'true') {
-            html.classList.add('darkmode');
-            //texto.innerText = 'Claro'; //cambia el texto de span
-            icon.classList.toggle('fa-sun'); //cambia el icono del enlance
-        }
-    }
-    
-    function store(value) {
-        localStorage.setItem('darkmode', value);
-    }   
-</script>
-
 
 </body>
 
